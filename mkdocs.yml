@@ -1,0 +1,8 @@
+site_name: 
+system_name: system:default/rfp
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: teste-app-by-template
+  annotations:
+    github.com/project-slug: coe-tech/teste-app-by-template
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: coe-tech
+  tags:
+      - frontend
+      - react
+  links:
+    - url: https://admin.example-org.com
+      title: Admin Dashboard
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: website
+  lifecycle: development
+  owner: group:default/guest
+  system: system:default/rfp
+  # definition:
+  #   $text: https://petstore.swagger.io/v2/swagger.json
+  dependsOn:
+    - component:coe-bff-node
+  # providesApis:
+  #   - login-api
